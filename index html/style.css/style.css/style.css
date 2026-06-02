@@ -1,0 +1,127 @@
+/* =====================
+   CONFIGURAÇÕES GERAIS
+===================== */
+:root {
+    --cor-bg: #fffafc;
+    --cor-rosa: #f8d7da;
+    --cor-azul: #d0e7ff;
+    --cor-lilas: #e6d0ff;
+    --cor-amarelo: #fff5cc;
+    --cor-texto: #333;
+    --cor-secundaria: #555;
+    --padding: 1rem;
+    --border-radius: 12px;
+    --shadow: 0 4px 12px rgba(0,0,0,0.08);
+    --font-base: 'Arial', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-base);
+}
+
+body {
+    background-color: var(--cor-bg);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+
+/* =====================
+   ACESSIBILIDADE
+===================== */
+.acessibilidade {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 999;
+}
+
+.acessibilidade button {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--cor-azul);
+    color: var(--cor-texto);
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+}
+
+.acessibilidade button:hover {
+    transform: scale(1.1);
+}
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 80vh;
+    background: linear-gradient(135deg, var(--cor-lilas), var(--cor-azul));
+    color: var(--cor-texto);
+    padding: var(--padding);
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 2rem;
+}
+
+.btn-acao {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    background-color: var(--cor-rosa);
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s;
+}
+
+.btn-acao:hover {
+    transform: scale(1.05);
+}
+
+/* =====================
+   CONTEÚDO / CARDS
+===================== */
+main {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.cards .card {
+    background-color: var(--cor-azul);
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+    box-shadow: var(--shadow);
+}
+
+.cards .card h2 {
+    margin-bottom: 1rem;
+    color: var(--cor-texto);
+}
+
+.cards .card
